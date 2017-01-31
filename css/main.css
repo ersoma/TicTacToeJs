@@ -1,0 +1,122 @@
+/* LAYOUT */
+body {
+    text-align: center;
+}
+
+#board {
+    border-spacing: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#board td {
+    width: 100px;
+    height: 100px;
+    background-color: #dddddd;
+    border: 1px solid #bbbbbb;
+    position: relative;
+}
+#board td.active {
+    cursor: pointer
+}
+#board td.active:hover {
+    background-color: #eeeeee;
+    border: 1x solid #dddddd;
+}
+
+#user-won {
+    background-color: rgba(190, 230, 190, 0.80);
+}
+#computer-won {
+    background-color: rgba(230, 190, 190, 0.8)
+}
+#nobody-won {
+    background-color: rgba(190, 190, 230, 0.8)
+}
+#user-won, #computer-won, #nobody-won {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-top: 100px;
+}
+#user-won h2, computer-won h2, #nobody-won h2 {
+    margin-top: 10px;
+}
+#user-won svg, #computer-won svg, #nobody-won svg {
+    width: 100px;
+    height: 100px;
+}
+#user-won button, #computer-won button, #nobody-won button{
+    padding: 10px;
+    border: 1px solid #aaaaaa;
+    background-color: #eeeeee;
+    cursor: pointer;
+}
+#user-won button:hover, #computer-won button:hover, #nobody-won button:hover{
+    background-color: #ffffff;
+}
+
+footer {
+    margin: 10px;
+    font-size: 80%;
+    color: #555555;
+}
+
+/* ANIMATION CUSTOMIZATION (http://stackoverflow.com/a/30047156) */
+.zoomIn {
+    -webkit-animation: zoomIn 0.25s; /* Safari 4+ */
+    -moz-animation:    zoomIn 0.25s; /* Fx 5+ */
+    -o-animation:      zoomIn 0.25s; /* Opera 12+ */
+    animation:         zoomIn 0.25s; /* IE 10+, Fx 29+ */
+}
+.pulse {
+    -webkit-animation: pulse 0.5s; /* Safari 4+ */
+    -moz-animation:    pulse 0.5s; /* Fx 5+ */
+    -o-animation:      pulse 0.5s; /* Opera 12+ */
+    animation:         pulse 0.5s; /* IE 10+, Fx 29+ */
+}
+
+/* PLAYERS (https://codepen.io/ndeniche/pen/ljbDL) */
+.x {
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.x:before, .x:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    background: #146ade;
+    height: 8px;
+    margin-top: -4px;
+  }
+.x::before {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.x::after {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+.o {
+    position: absolute;
+    top: 10px;
+    overflow: hidden;
+    border: 8px solid #ec2626;
+    border-radius: 50%;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+}

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>TicTacToeJs</title>
+        <meta name="description" content="Tic-Tac-Toe game implemented in JavaScript">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/animate.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        
+        <header>
+            <h1>TicTacToeJs</h1>
+        </header>
+
+        <section id="main-section">
+
+            <p>Click on an empty field or <a href="#" id="reset-game">reset the game</a>.</p>
+
+            <table id="board">
+                <tr>
+                    <td data-index="0"></td>
+                    <td data-index="1"></td>
+                    <td data-index="2"></td>
+                </tr>
+                <tr>
+                    <td data-index="3"></td>
+                    <td data-index="4"></td>
+                    <td data-index="5"></td>
+                </tr>
+                <tr>
+                    <td data-index="6"></td>
+                    <td data-index="7"></td>
+                    <td data-index="8"></td>
+                </tr>
+            </table>
+
+            <div id="user-won" class="animated fadeIn" style="display: none;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 5.8208332 5.8208335"><defs><linearGradient id="0" x1="488.2" y1="547.74" x2="488.11" y2="537.68" gradientUnits="userSpaceOnUse"><stop stop-color="#ffeb96"/><stop offset="1" stop-color="#fff1b7"/></linearGradient></defs><g transform="translate(-11.33-290.78)"><circle r="5.5" cy="542.35" cx="488.27" fill="url(#0)" transform="matrix(.43294 0 0 .43294-197.15 58.882)"/><g transform="translate(-12.12 3.336)" fill="none" fill-rule="evenodd" stroke="#414141" stroke-linecap="round" stroke-width=".132"><path d="m24.674 290.11c.003-.572.683-.632.815-.107"/><path d="m27.24 289.86c.003-.572.683-.632.815-.107"/><path d="m25.03 290.76c.755.849 1.97.693 2.676-.081"/></g></g></svg>
+                <h2>Good job!</h2>
+                <button>Restart</button>
+            </div>
+            <div id="computer-won" class="animated fadeIn" style="display: none;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 5.8208332 5.8208335"><defs><linearGradient gradientUnits="userSpaceOnUse" y2="537.68" x2="488.11" y1="547.74" x1="488.2" id="0"><stop stop-color="#ffeb96"/><stop offset="1" stop-color="#fff1b7"/></linearGradient></defs><g transform="translate(0-291.18)"><g transform="matrix(.29032 0 0 .29032 2.065 208.71)"><g transform="matrix(1.49127 0 0 1.49127-725.23-514.71)"><circle cx="488.27" cy="542.35" r="5.5" fill="url(#0)"/><g fill="#414141"><circle r=".6" cy="542.3" cx="485.18"/><circle r=".6" cy="542.3" cx="491.35"/></g></g><path d="m1.455 298.59c.476-1.323 2.476-1.323 2.91 0" fill="none" fill-rule="evenodd" stroke="#414141" stroke-linejoin="round" stroke-linecap="round" stroke-width=".503"/></g><path d="m400.08 520.08l-6.589 11.492c-1.385 2.43-1.492 5.519 0 8.12 2.242 3.911 7.23 5.263 11.141 3.02 3.911-2.242 5.263-7.23 3.02-11.141l-6.589-11.492c-.218-.38-.765-.38-.983 0" transform="matrix(.05461 0 0 .05461-20.898 266.11)" fill="#8acbef"/></g></svg>
+                <h2>Better luck next time!</h2>
+                <button>Restart</button>
+            </div>
+            <div id="nobody-won" class="animated fadeIn" style="display: none;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 5.8208332 5.8208335"><defs><linearGradient gradientUnits="userSpaceOnUse" y2="537.87" x2="481.51" y1="547.94" x1="481.6" id="0"><stop stop-color="#ffeb96"/><stop offset="1" stop-color="#fff1b7"/></linearGradient></defs><g transform="matrix(.43294 0 0 .43294-205.62-231.99)"><circle cx="481.66" cy="542.55" r="5.5" fill="url(#0)"/><g transform="translate(-7.44.975)"><g fill="#414141"><circle r=".6" cy="542.3" cx="485.13"/><circle r=".6" cy="542.3" cx="491.15"/></g><path d="m486.66 544.18h2.912" fill="none" fill-rule="evenodd" stroke="#414141" stroke-linecap="round" stroke-width=".275"/></g></g></svg>
+                <h2>It's a draw!</h2>
+                <button>Restart</button>
+            </div>
+
+        </section>
+
+        <footer>
+            © Copyright 2017, Soma Erdélyi
+        </footer>
+
+        <script src="js/jquery-3.1.1.min.js"></script>
+        <script src="js/jQueryExtensions.js"></script>
+        <script src="js/boardController.js"></script>
+        <script src="js/gameController.js"></script>
+        <script src="js/persistenceController.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
